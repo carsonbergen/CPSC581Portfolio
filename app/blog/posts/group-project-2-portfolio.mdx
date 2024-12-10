@@ -1,0 +1,146 @@
+---
+title: "Group Project 2 Portfolio"
+publishedAt: "2024-10-27"
+summary: "Phone sensor unlock. Sketch-To-Unlock."
+---
+
+# Phone Sensor Unlock
+
+# Description
+
+#### General Description
+
+Our application uses the phone's gyroscope to control an on-screen cursor. When the user presses the paint button a line will begin being drawn. Users can select colours to draw with by tapping the palette button. From there a menu will slide up displaying four different colours of which the user can select. The user can also adjust the speed of the cursor by clicking the speedometer button. This will slide up menu with a speedometer of which the user can click in order to change the speed of the cursor. The compass button resets the position of the cursor to the center of the canvas. The last drawing-related feature is shake-to-erase; when the user shakes their phone it will erase the canvas and stop drawing. The arrow button allows the user to submit the symbol they have drawn. Dots below the canvas demonstrate to the user the step they are currently on. Once the user finishes step 2 (after drawing and submitting the second symbol) the arrow button changes to a padlock button. Once the user clicks the padlock button two outcomes may occur: the first one being the password is correct, which will display the phone's home screen; and the second being the password is incorrect, where users will see the password they entered with a button asking if they want to try again. In the home screen there are two applications: one to set the password, and one to lock the phone.
+
+#### Unlock Description
+
+The user must draw two symbols in total. These symbols must not only match the symbols that were set by the user, but also need to be a specific colour. An example flow of interaction could be: user sets colour for the first symbol, draws first symbol, submits first symbol, sets colour for the second symbol, draws second symbol, submits second symbol, clicks the padlock button to unlock phone.
+
+In general, the user has to explicitly click the paint button to start painting and then also draw a symbol with the correct shape and colour. It would be nearly impossible for the user to accidentally draw the symbols with the correct colours.
+
+As for security, the password is technically weaker then a numbered passcode. However we could greatly increase the strength of passcode by simply adding more to it. For example, instead of two symbols we could double it to four symbols; however, this does increase the time to enter the passcode and would affect the user's experience.
+
+# 10 Concept Sketches
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/init-1.png"
+/>
+
+1. Entering the passcode by moving the phone to different locations to create a pattern.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/init-2.png"
+/>
+
+2. Use lidar to scan objects. If the scanned objects match the known object, it unlocks the phone.
+3. Do a sequence of skateboard tricks with your phone to unlock it.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/init-3.png"
+/>
+
+4. Do a sequence of hand signals to unlock the phone. Signals would be detected with the phone's camera.
+5. Sing a song into the microphone using the correct key and volume to unlock the phone.
+6. Smack the phone with a certain rhythm and force to unlock the phone.
+7. User makes a sequence of decisions on paths to take to unlock the phone. Uses AR to generate a map of the current decision to be made.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/init-4.png"
+/>
+
+8. User does a sequence of dance moves to unlock the phone.
+9. User plays rock-paper-scissors to unlock the phone.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/init-5.png"
+/>
+
+10. User balances a 3D ball into different slots in enter in a passcode.
+
+# Refined Sketches
+
+### My Sketches
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/refined-1.png"
+/>
+
+1. In this sketch I was determining how we should handle the entered passcode, and how we should handle when the passcode is wrong.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/refined-2.png"
+/>
+
+2. This sketch varies from the chosen idea, such that instead of using the phone to draw the user uses their camera and hands to draw the symbols.
+
+### Other Sketches
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/other-1.png"
+/>
+
+1. This sketch by Justin shows how we were considering adding colour to our idea.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/group-project-2/other-2.png"
+/>
+
+2. This sketch by Asim is related to Justin's in that it depicts how we might handle selecting colours.
+
+# Video
+
+<div>
+  <iframe
+    height={300}
+    className="rounded-md w-full"
+    src="https://www.youtube.com/embed/YJjHwfU30nU?si=_XSgCHCUqXUtPDFa"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullScreen
+  />
+</div>
+
+# Process
+
+### Implementation
+
+The final version features a drawing-canvas, two dots (indicating the current step the user is on) just below the canvas, and buttons anchored to the bottom-right of the screen. The white paint button toggles the painting on and off. The purple palette button showcases and hides the colour palette modal. The orange speedometer shows and hides the speedometer modal. The yellow compass button resets the user's cursor to the middle of the canvas. The green arrow button submits the user's current drawing, and the green padlock button attempts to unlock the phone. If it fails to unlock the phone the user will be notified, and if it succeeds users will be taken to the phone's homepage. If the user shakes the phone the current drawing in the canvas will be erased and drawing will be turned off if it is already on. If the user fails to enter the password correctly they will be able to show the password they entered, and can click a button to try again. If they enter the home screen they can choose to set the password or lock the phone using the home-screen icons. The two dots below the canvas show the user's current step in the passcode-entering process.
+
+### Division of Work
+
+I tackled setting up the machine learning model. Originally we were going to have the app train the model itself, but this proved to be out-of-scope for this project. Instead we used Teachable Machine to generate a static model for us. I also designed most of the buttons and did the animations showcased in the application. 
+
+The rest was done by group members. We tried to divide work evenly and kept in constant communication throughout the development of the application.
+
+### How Does Our Application Fit The Objective?
+
+It does as the original goal was to figure out how we can unlock a phone using the phone sensor. The core feature of the application, unlocking the phone, does use the sensor and uses touch as a means to supplement the interaction. 
+
+### What would I change?
+
+Using Teachable Machine was easy, however I would rather have used our own model that of which the user trained. However, this raises a lot of implementation and performance concerns.
+
+# Link to the Live Production Build & Source Code
+
+- <a href="https://cpsc-581-group-project2.vercel.app/">Live Production Build</a>
+- <a href="https://github.com/carsonbergen/CPSC581GroupProject2">Source Code</a>

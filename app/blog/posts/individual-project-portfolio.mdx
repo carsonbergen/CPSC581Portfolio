@@ -1,0 +1,170 @@
+---
+title: "Individual Project"
+publishedAt: "2024-11-17"
+summary: "Workout application using proxemics."
+---
+
+# Active Track
+
+# Description
+
+#### General Description
+
+Active Track is an application that demonstrates a system in which users can use a large touchscreen monitor to edit and view their current workout. Using their phone they can remove exercises, add exercises, and start a new workout. With the touchscreen they can adjust sets (reps and weights per set), and they can complete their workout.
+
+In modern gyms collaboration between members can be beneficial. Whether working out with friends or a trainer. Allowing users to have a centralised way in which to manage their workout allows for freedom between users to share what they are doing. Additionally, the centralised nature allows trainers to plan workouts for clients before entering the gym. Then, the trainer can help coach the client while the workout is in progress. Adjusting the workout with the client, rather than having the client guess what is next.
+
+# 10 Concept Sketches
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/1.png"
+/>
+
+1. The first sketch that created the idea for the application. User walks to screen to check their personal workout.
+2. This idea was out of scope and had to be scraped, but the idea was that the application would not only allow you to manage the workout with the screen, but there would be a camera that would detect and track specific movements.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/2.png"
+/>
+
+3. This was idea on how a "smart" bed may function. Detecting when the user is asleep and out of bed, and doing different actions depending on the user's state.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/3.png"
+/>
+
+4. A touchscreen table that would record meeting notes and display them, as well as allowing for collaboration on a computer.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/4.png"
+/>
+
+5. An application that tracks the score and accuracy data between two individuals playing basketball.
+6. An application that tracks the score, error rate, and accuracy of two people playing badminton.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/5.png"
+/>
+
+7. A sketch of how the application might show the current exercise a user is doing.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/6.png"
+/>
+
+8. Sketches of how the application handles various proxemic interactions.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/7.png"
+/>
+
+9. Sketch of how people might share their workouts.
+10. Sketch of how a trainer might help a client with their workout.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/8.png"
+/>
+
+11. Sketch of how a user may interact with the screen from their phone.
+
+# Storyboards
+
+### Identity
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-1.png"
+/>
+
+- User on the left's workout display disappears when not in view of the screen.
+
+### Distance
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-2.png"
+/>
+
+- As user gets closer the workout display expands.
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-3.png"
+/>
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-4.png"
+/>
+
+### Orientation
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-5.png"
+/>
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-6.png"
+/>
+
+- When user looks at screen, the workout display appears.
+
+### Movement
+
+<Image
+  width={300}
+  height={300}
+  src="/images/cpsc-581/individual-project/storyboard-7.png"
+/>
+
+# How did you come up with a particular idea/sketch?
+- I was thinking about early year residence. In one of the buildings they have a small gym, and I thought how I could incorporate proxemics into this gym. It would be rather unfeasible in a larger gym, or at least there may exist a need for multiple of these monitors to exist within the gym if it is larger.
+
+# On review of your final application what would you change now that you had some time to think about it?
+- There does not exist a lot of existing APIs for pose detection that work natively on desktop. Largely, the best APIs only exist for mobile devices. Thus, I would have liked to create my own backend and my own model to detect the poses.
+
+# How does your application fit the objective?
+- My application simulates four proxemic interactions: identity, distance, orientation, and movement. It identifies between different people and displays their workouts for them. As the user walks away the workout display shrinks until it is eventually hidden when the user is completely out of range. The eye icon demonstrates what would occur when the user is looking, and is not looking at the screen. Movement is used as the workout display follows the user as they move.
+
+# Video
+
+<div>
+  <iframe
+    height={300}
+    className="rounded-md w-full"
+    src="https://www.youtube.com/embed/ar1L-5as2kQ?si=alq9vu_BSd5VZ3hI"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  />
+</div>
+
+# URL to source code
+
+[https://github.com/carsonbergen/fitness_app](https://github.com/carsonbergen/fitness_app)

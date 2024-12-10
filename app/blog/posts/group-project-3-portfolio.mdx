@@ -1,0 +1,77 @@
+---
+title: 'Group Project 3 Portfolio'
+publishedAt: '2024-12-09'
+summary: 'Arduino project.'
+---
+
+# Overall Description
+
+Yerba mate is a caffeinated drink hailing from the indigenous Guaraní in South America. It requires a rather involved process to make it properly, this is where our application aims to help beginner and advanced yerba mate drinkers. 
+
+Generally speaking, this how it is prepared:
+1. Warm up water, but do not boil the water.
+2. Fill ~2/3 of the mate gourd with yerba.
+3. Tilt the gourd at a 45 degree angle and gently shake the gourd to create a slope of yerba.
+4. Pour cold water until half the slope is covered, wait one minute.
+5. Pour hot water until half the slope is covered, wait one minute.
+6. Dig the bombilla into the slope.
+7. Add more hot water as needed.
+
+Which is relatively more involved than preparing standard coffee in a coffee pot. Thus, our companion application aids the user in some of the steps revolving around preparing mate, and the physical product helps with the timing of steps 4 and 5.
+
+The physical product and companion application are designed to be simple, and to not over complicate an already (perhaps) over-complicated drink. 
+
+# 10 Concept Sketches & Write-ups
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/1.png" />
+
+1. The Brick is an idea you'll see throughout my sketches. This was my favourite idea. Essentially the idea was to have some sort of brick-like object that would monitor if an item (most likely your phone) was inside a search area of the camera. If not it would warn you. Then on a timer it would let you use the item for a specified amount of time before notifying you to put the item back in its position. The motivation was that I sometimes get distracted by my phone, or perhaps something else like my Steam Deck. So I was thinking about how exactly could we create some physical object that holds you accountable. I had seen something for managing screen-time called Brick, so I figured using that same idea of just having something simple like a box could make for interesting, and I thought about how we could expand on it. In the end, it became a very complex and out-of-scope idea because you could adjust what you are managing. For example, you could set it up to remind you to drink water, or to eat healthy snacks while studying. Then there were time-blocks. Where you could block out time where The Brick requires that the object is inside of the area, and keeps track of the object during that time. The blocks could be related to times of the day, for example work/studying, and could be related to objects. 
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/2.png" />
+
+5. My sketch which inspired the rest of the project. I drew this with the thought that no one in my group was going to want to do it, but it ended up being what both of my group members wanted to do. Truth be told, I just wanted to fill up my ten sketches because I thought The Brick was the best idea. The motivation behind this was that when I started drinking yerba mate, I was a bit lost and there were not a lot of good resources that reached a consensus on what were the proper steps. 
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/3.png" />
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/4.png" />
+
+# Storyboards & Write-ups
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/5.png" />
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/6.png" />
+
+<Image width={300} height={300} src="/images/cpsc-581/group-project-3/7.png" />
+
+# Project Reflection & Write-ups
+
+## My Motivation
+
+As far as my designs go, I wanted to create something useful for everyday life. I personally already have enough products that I use rarely or on occasion. Thus, my motivation for all my sketches was something I personally would/could use everyday. In addition to that, I wanted something that could improve my life in some way. The Brick definitely was my favourite idea, and I could see myself expanding upon this idea and creating something that is more flexible and better in some regards, than what currently exists on the market. 
+
+## What Did Not Work
+
+This was my first time working with an Arduino, and my second time doing GPIO programming. Overall, I wish we had more pins and a way to make the wiring of the breadboards neater. I am really neat, and would have likely to make the project a lot more neat than it ended up being. Additionally, the WiFi module did not work easily and we ended up scraping it. I would have liked to actually have the application connect to the companion phone app through an API.
+
+## What Would I Do Differently
+
+I think I would have liked to make more physical iterations of the physical product, taking into account the breadboards and wiring more. I think this would have allowed us to end up with a more properly <i>engineered and high-quality</i> end product. Additionally, I think I would have rather used a board that came with WiFi built in like my Raspberry Pi. Then for sensors, I would have liked to have some sensor to read in the temperature of the water, and give the user recommendations based on warmness of the water. For example, if it is too hot it would warn the user and recommend dropping in some ice cubes, or if it is too warm it would warn them to put it back on the stove or back in the kettle.
+
+## What Would I Change
+
+I think the companion app on the phone could be expanded upon. For example, it could have information on curing mates, the different types of mates, the different types of bombillas, how to make the yerba mate taste different with mint or other things like dried fruits, how to make tereré (a cold-brew version of yerba mate with fruit juice) and more steps. The steps I mentioned above could have been displayed to the user in the application and we could have also included different brewing styles. For example, I talk about the slope a lot and to me it is pretty important to make yerba mate properly, but there are a lot of people who just dump yerba and water in their mate gourds (albeit it is a different type of gourd). The physical product could also display the steps through an LCD screen, making the companion app a completely optional addition. In general, there is a lot to be expanded upon, in regards to the companion app and to the physical product. 
+
+# Video
+
+<iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/oPv-8USPGA8?si=mdr2ytlx5IIFBNH0" 
+    title="YouTube video player" 
+    frameBorder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerPolicy="strict-origin-when-cross-origin" allowFullScreen 
+/>
+
+# Source Code
+- <a href="https://github.com/carsonbergen/CPSC581GroupProject3">GitHub repository</a>
