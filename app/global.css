@@ -1,11 +1,89 @@
 @import 'tailwindcss';
 
+.gradient1 {
+  background-image: linear-gradient(
+    55deg,
+    hsl(0deg 0% 0%) 0%,
+    hsl(240deg 100% 37%) 14%,
+    hsl(240deg 100% 44%) 25%,
+    hsl(238deg 100% 50%) 33%,
+    hsl(266deg 100% 50%) 40%,
+    hsl(276deg 100% 50%) 46%,
+    hsl(285deg 100% 50%) 52%,
+    hsl(293deg 100% 48%) 57%,
+    hsl(300deg 100% 47%) 63%,
+    hsl(306deg 100% 50%) 69%,
+    hsl(306deg 100% 38%) 76%,
+    hsl(306deg 100% 26%) 86%,
+    hsl(0deg 0% 0%) 100%
+  );
+}
+
+.gradient2 {
+  background-image: linear-gradient(
+    45deg,
+    hsl(240deg 100% 43%) 0%,
+    hsl(288deg 100% 38%) 3%,
+    hsl(312deg 100% 42%) 8%,
+    hsl(324deg 100% 50%) 15%,
+    hsl(315deg 100% 47%) 23%,
+    hsl(299deg 100% 43%) 32%,
+    hsl(278deg 100% 50%) 42%,
+    hsl(299deg 100% 43%) 54%,
+    hsl(315deg 100% 47%) 65%,
+    hsl(324deg 100% 50%) 76%,
+    hsl(334deg 100% 50%) 86%,
+    hsl(345deg 100% 50%) 94%,
+    hsl(0deg 100% 50%) 100%
+  );
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Dela Gothic One';
+    src: url('/fonts/Dela_Gothic_One/DelaGothicOne-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Helmet';
+    src: url('/fonts/helmet/Helmet-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Nunito Sans';
+    src: url('/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
+  }
+
+  .font-outline-2 {
+    -webkit-text-stroke: 2px black;
+  }
+  
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
+}
+
+
+
+@theme {
+  --color-primary-light: #D5D6DB;
+  --color-primary-dark: #000;
+  --color-pink: #F72798;
+  --color-yellow: #EBF400;
+  --color-orange: #F57D1F;
+  --font-family-dela-gothic-one: "Dela Gothic One", sans-serif;
+  --font-family-helmet: "Helmet", sans-serif;
+  --font-family-nunito-sans: "Nunito Sans", sans-serif;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
 }
 
 :root {
+  @apply font-nunito-sans hyphens-auto;
+
   --sh-class: #2d5e9d;
   --sh-identifier: #354150;
   --sh-sign: #8996a3;
@@ -48,11 +126,11 @@ html {
 }
 
 .prose a {
-  @apply underline transition-all decoration-neutral-400 dark:decoration-neutral-600 underline-offset-2 decoration-[0.1em];
+  @apply underline transition-all decoration-neutral-400 underline-offset-2 decoration-[0.1em];
 }
 
 .prose .anchor:after {
-  @apply text-neutral-300 dark:text-neutral-700;
+  @apply text-neutral-300;
   content: '#';
 }
 
@@ -61,7 +139,7 @@ html {
 }
 
 .prose pre {
-  @apply bg-neutral-50 dark:bg-neutral-900 rounded-lg overflow-x-auto border border-neutral-200 dark:border-neutral-900 py-2 px-3 text-sm;
+  @apply bg-neutral-50 rounded-lg overflow-x-auto border border-neutral-200 py-2 px-3 text-sm;
 }
 
 .prose code {
@@ -84,23 +162,23 @@ html {
 }
 
 .prose p {
-  @apply my-4 text-neutral-800 dark:text-neutral-200;
+  @apply my-4 text-neutral-200;
 }
 
 .prose h1 {
-  @apply text-4xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-3xl font-medium tracking-tight mt-6 mb-2 font-dela-gothic-one;
 }
 
 .prose h2 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-medium tracking-tight mt-6 mb-2 font-bold;
 }
 
 .prose h3 {
-  @apply text-xl font-medium tracking-tight mt-6 mb-2;
+  @apply text-xl font-medium tracking-tight mt-6 mb-2 font-bold; 
 }
 
 .prose h4 {
-  @apply text-lg font-medium tracking-tight mt-6 mb-2;
+  @apply text-lg font-medium tracking-tight mt-6 mb-2 font-bold;
 }
 
 .prose strong {

@@ -30,10 +30,10 @@ export default function Footer() {
               link="https://github.com/vercel/next.js"
               text="nextjs"
             />
-            {/* <FooterLink
+            <FooterLink
               link="https://vercel.com/templates/next.js/portfolio-starter-kit"
               text="portfolio starter kit"
-            /> */}
+            />
           </ul>
         </div>
       </div>
