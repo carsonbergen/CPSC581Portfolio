@@ -1,6 +1,5 @@
 "use client";
 import { ReactNode, useState } from "react";
-import { m } from "framer-motion";
 
 export default function Card({
   children,
@@ -28,20 +27,13 @@ export default function Card({
 
   return (
     <div className={`flex flex-wrap relative py-2 md:p-2 w-full z-0 overflow-visible ${className}`}>
-      <m.div
+      <div
         className="
           relative top-0 left-0 w-full h-full
           rounded-lg p-2
           backdrop-blur-md
           border border-[#ffffff14]
         "
-        initial={{
-          zIndex: 0,
-        }}
-        whileHover={{
-          zIndex: 9999,
-          scale: 1.1,
-        }}
       >
         <div
           className="rounded-md backdrop-blur-2xl flex flex-row justify-start items-center mb-1"
@@ -59,7 +51,7 @@ export default function Card({
         >
           {children}
         </div>
-      </m.div>
+      </div>
     </div>
   );
 }
