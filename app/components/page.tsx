@@ -1,6 +1,5 @@
 "use client";
 
-import { m } from "framer-motion";
 import { ReactNode } from "react";
 
 export default function Page({ children }: { children: ReactNode }) {
