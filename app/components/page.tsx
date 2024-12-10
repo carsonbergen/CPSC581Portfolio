@@ -2,8 +2,8 @@
 
 import { ReactNode } from "react";
 
-export default function Page({ children }: { children: any }) {
+export default function Page() {
   return (
-    <div className="px-2 pb-64">{children}</div>
+    <div className="px-2 pb-64">{}</div>
   );
 }
